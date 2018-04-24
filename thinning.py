@@ -13,7 +13,7 @@ import skimage.io as io
 Img_Original =  io.imread( './data/test1.bmp')      # Gray image, rgb images need pre-conversion
 
 "Convert gray images to binary images using Otsu's method"
-from skimage.filter import threshold_otsu
+from skimage.filters import threshold_otsu
 Otsu_Threshold = threshold_otsu(Img_Original)   
 BW_Original = Img_Original < Otsu_Threshold    # must set object region as 1, background region as 0 !
 
